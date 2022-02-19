@@ -28,8 +28,7 @@ const App = () => {
     .then(response => {
       setUserName(response.data.user.name);
       setUserEmail(response.data.user.email);
-
-      console.log("response.data: ", response.data);
+      // console.log("response.data: ", response.data);
     })
     .catch(err => {
       console.log("Error received during Axios GET request.", err);
@@ -40,9 +39,9 @@ const App = () => {
     <div>
       <h1>{mainTitle}</h1>
       <h2>Position: UI Software Engineer</h2>
+      <p>Email</p>
+      <input value={userEmail}/>
       <PasswordInput />
-      <p>{userEmail}</p>
-      <p>{userName}</p>
     </div>
   )
 
