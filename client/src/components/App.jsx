@@ -35,15 +35,18 @@ const App = () => {
     })
   }
 
-  return (
-    <div>
-      <h1>{mainTitle}</h1>
-      <h2>Position: UI Software Engineer</h2>
-      <p>Email</p>
-      <input value={userEmail}/>
-      <PasswordInput />
-    </div>
-  )
+    return (
+      <div>
+        <h1>{mainTitle}</h1>
+        <h3>Position: UI Software Engineer</h3>
+        <h3>Applicant: Jean-Luc Felix</h3>
+        <p>Email</p>
+        <input value={userEmail}/>
+        <PasswordInput
+        userName={userName}
+        userEmail={userEmail} />
+      </div>
+    )
 
 }
 

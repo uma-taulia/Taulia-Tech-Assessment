@@ -4,9 +4,7 @@ import "../../dist/styles.css";
 const PasswordInput = (props) => {
 
   const [ inputText, setInputText ] = useState([]);
-  const [ isNumber, setIsNumber ] = useState(false);
   const [ showPassword, setShowPassword ] = useState(false);
-  const [ isEmailMatch, setIsEmailMatch ] = useState(false);
 
   const ifWithinLimit = (input) => {
     if (input.length >= 8 && input.length <= 72) {
@@ -41,6 +39,24 @@ const PasswordInput = (props) => {
       }
     }
     return false;
+  }
+
+  const doesContainEmail = (input) => {
+
+    if (typeof props.userName === "string" && input.length > 0) {
+
+      const lowerCaseInput = input.toLowerCase();
+      const lowerCaseEmail = props.userEmail.toLowerCase();
+      const splitName = props.userName.split(" ");
+      const firstName = splitName[0].toLowerCase();
+
+      if (lowerCaseInput.includes(firstName) || lowerCaseInput.includes(lowerCaseEmail)) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
   }
 
   const toggleShow = () => {
@@ -85,7 +101,11 @@ const PasswordInput = (props) => {
             <li className="metRequirement">1 Number</li> :
             <li>1 Number</li>
           }
-          <li>Should Not Match Your Email Address</li>
+          {
+            doesContainEmail(inputText) ?
+            <li>Should Not Match Your Email Address</li> :
+            <li className="metRequirement">Should Not Match Your Email Address</li>
+          }
         </ul>
       </div>
     </div>
