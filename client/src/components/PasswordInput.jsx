@@ -10,6 +10,14 @@ const PasswordInput = (props) => {
   const [ isNumber, setIsNumber ] = useState(false);
   const [ isEmailMatch, setIsEmailMatch ] = useState(false);
 
+  const ifWithinLimit = (input) => {
+    if (input.length >= 8 && input.length <= 72) {
+      return true
+    } else {
+      return false;
+    }
+  }
+
   return (
     <div>
       <div className="passwordInput">
@@ -20,7 +28,7 @@ const PasswordInput = (props) => {
       <div className="requirements">
         <ul>
           {
-            inputText.length >= 8 && inputText.length <= 72 ?
+            ifWithinLimit(inputText) ?
             <li className="metRequirement">8-72 Characters</li> :
             <li>8-72 Characters</li>
           }
@@ -36,3 +44,12 @@ const PasswordInput = (props) => {
 }
 
 export default PasswordInput;
+
+
+
+
+// {
+//   inputText.length >= 8 && inputText.length <= 72 ?
+//   <li className="metRequirement">8-72 Characters</li> :
+//   <li>8-72 Characters</li>
+// }
