@@ -4,8 +4,8 @@ import "../../dist/styles.css";
 const PasswordInput = (props) => {
 
   const [ inputText, setInputText ] = useState([]);
-  const [ isLowerCase, setIsLowerCase ] = useState(false);
   const [ isNumber, setIsNumber ] = useState(false);
+  const [ showPassword, setShowPassword ] = useState(false);
   const [ isEmailMatch, setIsEmailMatch ] = useState(false);
 
   const ifWithinLimit = (input) => {
@@ -34,12 +34,25 @@ const PasswordInput = (props) => {
     return false;
   }
 
+  const toggleShow = () => {
+    setShowPassword(prevState => !showPassword);
+  }
+
   return (
     <div>
       <div className="passwordInput">
         <p>Password</p>
-        <input type="password" onChange={(e) => setInputText(event.target.value)} value={inputText}/>
-        <button>Show</button>
+        {
+          !showPassword ?
+          <div>
+            <input type="password" onChange={(e) => setInputText(event.target.value)} value={inputText}/>
+            <button onClick={toggleShow}>Show</button>
+          </div> :
+          <div>
+            <input onChange={(e) => setInputText(event.target.value)} value={inputText}/>
+            <button onClick={toggleShow}>Hide</button>
+          </div>
+        }
       </div>
       <div className="requirements">
         <ul>
