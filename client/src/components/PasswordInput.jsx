@@ -4,7 +4,6 @@ import "../../dist/styles.css";
 const PasswordInput = (props) => {
 
   const [ inputText, setInputText ] = useState([]);
-  const [ isUpperCase, setIsUpperCase ] = useState(false);
   const [ isLowerCase, setIsLowerCase ] = useState(false);
   const [ isNumber, setIsNumber ] = useState(false);
   const [ isEmailMatch, setIsEmailMatch ] = useState(false);
@@ -20,6 +19,15 @@ const PasswordInput = (props) => {
   const doesContainUppercase = (input) => {
     for (var i = 0; i < input.length; i++) {
         if (input[i] === input[i].toUpperCase()) {
+          return true;
+        }
+    }
+    return false;
+  }
+
+  const doesContainLowercase = (input) => {
+    for (var i = 0; i < input.length; i++) {
+        if (input[i] === input[i].toLowerCase()) {
           return true;
         }
     }
@@ -45,7 +53,11 @@ const PasswordInput = (props) => {
             <li className="metRequirement">1 Uppercase Character</li> :
             <li>1 Uppercase Character</li>
           }
-          <li>1 Lowercase Character</li>
+          {
+            doesContainLowercase(inputText) ?
+            <li className="metRequirement">1 Lowercase Character</li> :
+            <li>1 Lowercase Character</li>
+          }
           <li>1 Number</li>
           <li>Should Not Match Your Email Address</li>
         </ul>
