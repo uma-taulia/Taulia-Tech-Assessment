@@ -4,7 +4,7 @@ import "../../dist/styles.css";
 const PasswordInput = (props) => {
 
   const [ inputText, setInputText ] = useState([]);
-  const [ isLimit, setIsLimit ] = useState(false);
+  // const [ isLimit, setIsLimit ] = useState(false);
   const [ isUpperCase, setIsUpperCase ] = useState(false);
   const [ isLowerCase, setIsLowerCase ] = useState(false);
   const [ isNumber, setIsNumber ] = useState(false);
@@ -19,7 +19,11 @@ const PasswordInput = (props) => {
       </div>
       <div className="requirements">
         <ul>
-          <li>8-72 Characters</li>
+          {
+            inputText.length >= 8 && inputText.length <= 72 ?
+            <li className="metRequirement">8-72 Characters</li> :
+            <li>8-72 Characters</li>
+          }
           <li>1 Uppercase Character</li>
           <li>1 Lowercase Character</li>
           <li>1 Number</li>
