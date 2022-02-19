@@ -36,7 +36,7 @@ const App = () => {
   }
 
     return (
-      <div>
+      <div className="app">
         <h1>{mainTitle}</h1>
         <h3>Position: UI Software Engineer</h3>
         <h3>Applicant: Jean-Luc Felix</h3>

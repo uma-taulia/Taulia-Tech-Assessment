@@ -42,7 +42,6 @@ const PasswordInput = (props) => {
   }
 
   const doesContainEmail = (input) => {
-
     if (typeof props.userName === "string" && input.length > 0) {
 
       const lowerCaseInput = input.toLowerCase();
@@ -56,7 +55,6 @@ const PasswordInput = (props) => {
         return false;
       }
     }
-
   }
 
   const toggleShow = () => {
@@ -69,11 +67,11 @@ const PasswordInput = (props) => {
         <p>Password</p>
         {
           !showPassword ?
-          <div>
+          <div className="inputPassword">
             <input type="password" onChange={(e) => setInputText(event.target.value)} value={inputText}/>
             <button onClick={toggleShow}>Show</button>
           </div> :
-          <div>
+          <div className="inputPassword">
             <input onChange={(e) => setInputText(event.target.value)} value={inputText}/>
             <button onClick={toggleShow}>Hide</button>
           </div>
