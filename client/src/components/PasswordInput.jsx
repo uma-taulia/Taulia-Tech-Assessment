@@ -38,7 +38,7 @@ const PasswordInput = (props) => {
     <div>
       <div className="passwordInput">
         <p>Password</p>
-        <input onChange={(e) => setInputText(event.target.value)} value={inputText}/>
+        <input type="password" onChange={(e) => setInputText(event.target.value)} value={inputText}/>
         <button>Show</button>
       </div>
       <div className="requirements">
