@@ -70,7 +70,8 @@ const PasswordInput = (props) => {
           <div className="inputPassword">
             <input type="password" onChange={(e) => setInputText(event.target.value)} value={inputText}/>
             <button onClick={toggleShow}>Show</button>
-          </div> :
+          </div>
+          :
           <div className="inputPassword">
             <input onChange={(e) => setInputText(event.target.value)} value={inputText}/>
             <button onClick={toggleShow}>Hide</button>
@@ -113,11 +114,3 @@ const PasswordInput = (props) => {
 
 export default PasswordInput;
 
-
-
-
-// {
-//   inputText.length >= 8 && inputText.length <= 72 ?
-//   <li className="metRequirement">8-72 Characters</li> :
-//   <li>8-72 Characters</li>
-// }
