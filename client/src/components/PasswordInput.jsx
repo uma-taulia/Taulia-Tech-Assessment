@@ -63,7 +63,7 @@ const PasswordInput = (props) => {
 
   return (
     <div>
-      <div className="passwordInput">
+      <div className="mainInput">
         <p>Password</p>
         {
           !showPassword ?
@@ -149,38 +149,3 @@ const PasswordInput = (props) => {
 
 export default PasswordInput;
 
-
-
-
-
-// // BACKUP CODE
-
-// <div className="requirements">
-// <ul>
-//   {
-//     ifWithinLimit(inputText) ?
-//     <li className="metRequirement">8-72 Characters</li> :
-//     <li>8-72 Characters</li>
-//   }
-//   {
-//     doesContainUppercase(inputText) ?
-//     <li className="metRequirement">1 Uppercase Character</li> :
-//     <li>1 Uppercase Character</li>
-//   }
-//   {
-//     doesContainLowercase(inputText) ?
-//     <li className="metRequirement">1 Lowercase Character</li> :
-//     <li>1 Lowercase Character</li>
-//   }
-//   {
-//     doesContainNumber(inputText) ?
-//     <li className="metRequirement">1 Number</li> :
-//     <li>1 Number</li>
-//   }
-//   {
-//     doesContainEmail(inputText) ?
-//     <li>Should Not Match Your Email Address</li> :
-//     <li className="metRequirement">Should Not Match Your Email Address</li>
-//   }
-// </ul>
-// </div>

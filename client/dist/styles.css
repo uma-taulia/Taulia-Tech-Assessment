@@ -8,6 +8,10 @@
   margin-bottom: 10px;
 }
 
+.userEmail {
+  margin-left: 40px;
+}
+
 .userEmail input {
   padding: 8px;
   border-style: solid;
@@ -23,6 +27,10 @@ li {
 li::before {
   content: "• ";
   color: rgb(240, 151, 68);
+}
+
+.mainInput {
+  margin-left: 40px;
 }
 
 .inputPassword {
@@ -42,6 +50,7 @@ li::before {
 .requirements ul {
   display: flex;
   flex-wrap: wrap;
+  width: 60%;
 }
 
 .requirements div {
