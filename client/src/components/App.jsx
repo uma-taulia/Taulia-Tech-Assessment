@@ -44,8 +44,9 @@ const App = () => {
           <h3>Applicant: Jean-Luc Felix</h3>
         </div>
         <div className="userEmail">
+          <h3>Create an account</h3>
           <p>Email</p>
-          <input value={userEmail}/>
+          <input value={userEmail} readOnly/>
         </div>
         <div>
           <PasswordInput
