@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import PasswordInput from "./PasswordInput.jsx";
+import "../../dist/styles.css";
 
 const App = () => {
 
@@ -40,8 +41,10 @@ const App = () => {
         <h1>{mainTitle}</h1>
         <h3>Position: UI Software Engineer</h3>
         <h3>Applicant: Jean-Luc Felix</h3>
-        <p>Email</p>
-        <input value={userEmail}/>
+        <div className="userEmail">
+          <p>Email</p>
+          <input value={userEmail}/>
+        </div>
         <PasswordInput
         userName={userName}
         userEmail={userEmail} />
