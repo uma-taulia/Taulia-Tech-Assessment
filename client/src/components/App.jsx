@@ -29,7 +29,6 @@ const App = () => {
     .then(response => {
       setUserName(response.data.user.name);
       setUserEmail(response.data.user.email);
-      // console.log("response.data: ", response.data);
     })
     .catch(err => {
       console.log("Error received during Axios GET request.", err);
