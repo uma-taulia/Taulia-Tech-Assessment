@@ -70,10 +70,9 @@ const PasswordInput = (props) => {
           <div className="inputPassword">
             <div className="password">
               <input type="password" onChange={(e) => setInputText(event.target.value)} value={inputText}/>
-              {/* <button onClick={toggleShow}>Show</button> */}
             </div>
-            <div className="showButton" >
-              <input type="checkbox" onClick={toggleShow} />
+            <div className="showButton">
+              <input type="checkbox" onClick={toggleShow} value={showPassword} />
               <label>Show</label>
             </div>
           </div>
@@ -81,10 +80,9 @@ const PasswordInput = (props) => {
           <div className="inputPassword">
             <div className="password">
               <input onChange={(e) => setInputText(event.target.value)} value={inputText}/>
-              {/* <button onClick={toggleShow}>Hide</button> */}
             </div>
             <div className="showButton">
-              <input type="checkbox" onClick={toggleShow} checked/>
+              <input type="checkbox" onClick={toggleShow} value={showPassword} checked/>
               <label>Show</label>
             </div>
           </div>

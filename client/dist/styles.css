@@ -13,12 +13,17 @@ li::before {
   color: rgb(240, 151, 68);
 }
 
-/* .inputPassword input {
+.inputPassword {
+  display: flex;
+  flex-direction: row;
+}
+
+.inputPassword input {
   padding: 6px;
   border-width: lighter;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-} */
+  /* border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px; */
+}
 
 .metRequirement {
   text-decoration: line-through;
@@ -27,4 +32,6 @@ li::before {
 .showButton {
   display: inline;
   border-style: solid;
+  border-width: thin;
+  padding: 4px;
 }
