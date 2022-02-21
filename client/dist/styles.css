@@ -23,3 +23,7 @@ li::before {
 .metRequirement {
   text-decoration: line-through;
 }
+
+.showButton {
+  border-style: solid;
+}
