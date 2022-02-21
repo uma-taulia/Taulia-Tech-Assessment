@@ -15,30 +15,36 @@ const PasswordInput = (props) => {
   }
 
   const doesContainUppercase = (input) => {
-    for (var i = 0; i < input.length; i++) {
-        if (input[i] === input[i].toUpperCase() && isNaN(input[i]) === true) {
-          return true;
-        }
+    if (input.length > 0) {
+      for (var i = 0; i < input.length; i++) {
+          if (input[i] === input[i].toUpperCase() && isNaN(input[i]) === true) {
+            return true;
+          }
+      }
+      return false;
     }
-    return false;
   }
 
   const doesContainLowercase = (input) => {
-    for (var i = 0; i < input.length; i++) {
-        if (input[i] === input[i].toLowerCase() && isNaN(input[i]) === true) {
-          return true;
-        }
+    if (input.length > 0) {
+      for (var i = 0; i < input.length; i++) {
+          if (input[i] === input[i].toLowerCase() && isNaN(input[i]) === true) {
+            return true;
+          }
+      }
+      return false;
     }
-    return false;
   }
 
   const doesContainNumber = (input) => {
-    for (var i = 0; i < input.length; i++) {
-      if (!isNaN(input[i])) {
-        return true;
+    if (input.length > 0) {
+      for (var i = 0; i < input.length; i++) {
+        if (!isNaN(input[i])) {
+          return true;
+        }
       }
+      return false;
     }
-    return false;
   }
 
   const doesContainEmail = (input) => {
