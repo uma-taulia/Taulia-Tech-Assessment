@@ -25,5 +25,6 @@ li::before {
 }
 
 .showButton {
+  display: inline;
   border-style: solid;
 }
