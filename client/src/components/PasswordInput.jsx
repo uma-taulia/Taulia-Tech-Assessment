@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../dist/styles.css";
+import "./PasswordInput.css";
 
 const PasswordInput = (props) => {
 

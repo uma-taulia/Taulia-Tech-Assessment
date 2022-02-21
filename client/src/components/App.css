@@ -1,4 +1,4 @@
-/* .app {
+.app {
   font-family: "Gill Sans", sans-serif;
   padding: 8px;
 }
@@ -27,4 +27,4 @@ li {
 li::before {
   content: "• ";
   color: rgb(240, 151, 68);
-} */
+}

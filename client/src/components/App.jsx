@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import PasswordInput from "./PasswordInput.jsx";
-import "../../dist/styles.css";
+import "./App.css";
 
 const App = () => {
 
