@@ -8,10 +8,6 @@
   margin-bottom: 10px;
 }
 
-.mainInput {
-  margin-left: 50px;
-}
-
 .userEmail input {
   padding: 8px;
   border-style: solid;
@@ -41,6 +37,15 @@ li::before {
   /* border-width: lighter; */
   /* border-top-left-radius: 4px;
   border-bottom-left-radius: 4px; */
+}
+
+.requirements ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.requirements div {
+  flex: 50%;
 }
 
 .metRequirement {
